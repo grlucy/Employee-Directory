@@ -38,7 +38,12 @@ class Search extends React.Component {
     if (this.state.search.trim() === "") {
       return;
     }
-    console.log(`this.state.search is: ${this.state.search}`);
+    let employees = this.state.result.filter(employee =>
+      employee.lastName.toUpperCase().includes(this.state.search.toUpperCase())
+    );
+    this.setState({
+      result: employees
+    });
   };
 
   handleClear = event => {
