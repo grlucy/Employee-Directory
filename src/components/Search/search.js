@@ -16,12 +16,9 @@ class Search extends React.Component {
         : (comparison = 0);
       return comparison;
     }),
-    search: ""
+    search: "",
+    sortMethod: "lastName Desc"
   };
-
-  componentDidMount() {
-    console.log(this.state.result);
-  }
 
   handleInputChange = event => {
     const value = event.target.value;
@@ -47,7 +44,6 @@ class Search extends React.Component {
   };
 
   handleClear = event => {
-    console.log(`clear btn was clicked`);
     this.setState({
       result: Employees.sort((a, b) => {
         const lastNameA = a.lastName.toUpperCase();
@@ -60,8 +56,82 @@ class Search extends React.Component {
           : (comparison = 0);
         return comparison;
       }),
-      search: ""
+      search: "",
+      sortMethod: "lastName Desc"
     });
+  };
+
+  handleSort = event => {
+    const sortTarget = event.target.dataset.sort;
+    if (sortTarget === "lastName") {
+      switch (this.state.sortMethod) {
+        case "lastName Desc":
+          this.setState({
+            result: this.state.result.sort((a, b) => {
+              const lastNameA = a.lastName.toUpperCase();
+              const lastNameB = b.lastName.toUpperCase();
+              let comparison = 0;
+              lastNameA > lastNameB
+                ? (comparison = -1)
+                : lastNameB > lastNameA
+                ? (comparison = 1)
+                : (comparison = 0);
+              return comparison;
+            }),
+            sortMethod: "lastName Asc"
+          });
+          break;
+        default:
+          this.setState({
+            result: this.state.result.sort((a, b) => {
+              const lastNameA = a.lastName.toUpperCase();
+              const lastNameB = b.lastName.toUpperCase();
+              let comparison = 0;
+              lastNameA > lastNameB
+                ? (comparison = 1)
+                : lastNameB > lastNameA
+                ? (comparison = -1)
+                : (comparison = 0);
+              return comparison;
+            }),
+            sortMethod: "lastName Desc"
+          });
+      }
+    } else if (sortTarget === "location") {
+      switch (this.state.sortMethod) {
+        case "location Desc":
+          this.setState({
+            result: this.state.result.sort((a, b) => {
+              const locationA = a.location.toUpperCase();
+              const locationB = b.location.toUpperCase();
+              let comparison = 0;
+              locationA > locationB
+                ? (comparison = -1)
+                : locationB > locationA
+                ? (comparison = 1)
+                : (comparison = 0);
+              return comparison;
+            }),
+            sortMethod: "location Asc"
+          });
+          break;
+        default:
+          this.setState({
+            result: this.state.result.sort((a, b) => {
+              const locationA = a.location.toUpperCase();
+              const locationB = b.location.toUpperCase();
+              let comparison = 0;
+              locationA > locationB
+                ? (comparison = 1)
+                : locationB > locationA
+                ? (comparison = -1)
+                : (comparison = 0);
+              return comparison;
+            }),
+            sortMethod: "location Desc"
+          });
+      }
+    }
   };
 
   render() {
@@ -79,7 +149,10 @@ class Search extends React.Component {
                   search={this.state.search}
                 />
                 <hr />
-                <SearchResults employees={this.state.result} />
+                <SearchResults
+                  employees={this.state.result}
+                  handleSort={this.handleSort}
+                />
               </div>
             </div>
           </div>

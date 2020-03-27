@@ -1,4 +1,5 @@
 import React from "react";
+import "./searchResults.css";
 
 function SearchResults(props) {
   return (
@@ -7,7 +8,12 @@ function SearchResults(props) {
         <table className="table table-sm table-striped text-nowrap">
           <thead>
             <tr>
-              <th scope="col" className="px-3">
+              <th
+                scope="col"
+                className="px-3 sortHeading"
+                data-sort="lastName"
+                onClick={props.handleSort}
+              >
                 Last Name <i className="fas fa-sort"></i>
               </th>
               <th scope="col" className="px-3">
@@ -19,7 +25,12 @@ function SearchResults(props) {
               <th scope="col" className="px-3">
                 Title
               </th>
-              <th scope="col" className="px-3">
+              <th
+                scope="col"
+                className="px-3 sortHeading"
+                data-sort="location"
+                onClick={props.handleSort}
+              >
                 Location <i className="fas fa-sort"></i>
               </th>
               <th scope="col">Phone</th>
