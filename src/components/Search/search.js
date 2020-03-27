@@ -13,6 +13,31 @@ class Search extends React.Component {
     console.log(this.state.result);
   }
 
+  handleInputChange = event => {
+    const value = event.target.value;
+    this.setState({
+      search: value
+    });
+  };
+
+  handleSubmit = event => {
+    event.preventDefault();
+  };
+
+  handleSearch = event => {
+    if (this.state.search.trim() === "") {
+      return;
+    }
+    console.log(`this.state.search is: ${this.state.search}`);
+  };
+
+  handleClear = event => {
+    console.log(`clear btn was clicked`);
+    this.setState({
+      search: ""
+    });
+  };
+
   render() {
     return (
       <>
@@ -20,7 +45,13 @@ class Search extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col text-center">
-                <SearchForm />
+                <SearchForm
+                  handleInputChange={this.handleInputChange}
+                  handleSubmit={this.handleSubmit}
+                  handleSearch={this.handleSearch}
+                  handleClear={this.handleClear}
+                  search={this.state.search}
+                />
                 <hr />
                 <SearchResults employees={this.state.result} />
               </div>
