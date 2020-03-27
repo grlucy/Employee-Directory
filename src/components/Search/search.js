@@ -4,6 +4,7 @@ import SearchResults from "../SearchResults/searchResults";
 import SearchForm from "../SearchForm/searchForm";
 
 class Search extends React.Component {
+  // employee data is initially sorted alphabetically by last name (descending)
   state = {
     result: Employees.sort((a, b) => {
       const lastNameA = a.lastName.toUpperCase();
@@ -18,6 +19,8 @@ class Search extends React.Component {
     }),
     search: "",
     sortMethod: "lastName Desc",
+    // sortStatus is true if current sortMethod is lastName, else false
+    // sortStatus controls styling of SearchResults table columns
     sortStatus: true
   };
 
