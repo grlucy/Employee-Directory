@@ -1,6 +1,7 @@
 import React from "react";
 import Employees from "../../employees.json";
 import SearchResults from "../SearchResults/searchResults";
+import SearchForm from "../SearchForm/searchForm";
 
 class Search extends React.Component {
   state = {
@@ -18,8 +19,8 @@ class Search extends React.Component {
         <section className="py-5">
           <div className="container">
             <div className="row">
-              <div className="col">
-                <h3>Search form</h3>
+              <div className="col text-center">
+                <SearchForm />
                 <hr />
                 <SearchResults employees={this.state.result} />
               </div>
