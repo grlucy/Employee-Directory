@@ -1,10 +1,16 @@
 import React from "react";
+import Employees from "../../employees.json";
+import SearchResults from "../SearchResults/searchResults";
 
 class Search extends React.Component {
   state = {
-    result: [],
+    result: Employees,
     search: ""
   };
+
+  componentDidMount() {
+    console.log(this.state.result);
+  }
 
   render() {
     return (
@@ -15,7 +21,7 @@ class Search extends React.Component {
               <div className="col">
                 <h3>Search form</h3>
                 <hr />
-                <h3>Search results</h3>
+                <SearchResults employees={this.state.result} />
               </div>
             </div>
           </div>

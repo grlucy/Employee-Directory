@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "lastName": "Jeong",
+    "firstName": "Ethan",
+    "department": "Finance",
+    "jobTitle": "Regional Vice President",
+    "location": "Feros",
+    "phone": "202-555-0142",
+    "email": "ejeong@exogeni.com"
+  },
+  {
+    "id": 2,
+    "lastName": "Baynham",
+    "firstName": "Juliana",
+    "department": "Research",
+    "jobTitle": "Senior Scientific Researcher",
+    "location": "Feros",
+    "phone": "202-555-0174",
+    "email": "jbaynham@exogeni.com"
+  },
+  {
+    "id": 3,
+    "lastName": "Baynham",
+    "firstName": "Lizbeth",
+    "department": "Research",
+    "jobTitle": "Biologist",
+    "location": "Zhu's Hope",
+    "phone": "202-555-0188",
+    "email": "lbaynham@exogeni.com"
+  },
+  {
+    "id": 4,
+    "lastName": "Hossle",
+    "firstName": "Gavin",
+    "department": "Security",
+    "jobTitle": "Security Officer",
+    "location": "Zhu's Hope",
+    "phone": "202-555-0100",
+    "email": "ghossle@exogeni.com"
+  },
+  {
+    "id": 5,
+    "lastName": "Ross",
+    "firstName": "John",
+    "department": "Research",
+    "jobTitle": "Senior Scientific Researcher",
+    "location": "Nodacrux",
+    "phone": "202-555-0116",
+    "email": "jross@exogeni.com"
+  },
+  {
+    "id": 6,
+    "lastName": "Farrin",
+    "firstName": "Debra",
+    "department": "Research",
+    "jobTitle": "Biochemist",
+    "location": "Joab",
+    "phone": "202-555-0131",
+    "email": "dfarrin@exogeni.com"
+  },
+  {
+    "id": 7,
+    "lastName": "Wright",
+    "firstName": "Lena",
+    "department": "Finance",
+    "jobTitle": "Junior Accountant",
+    "location": "Vancouver",
+    "phone": "912-555-0161",
+    "email": "lwright@exogeni.com"
+  },
+  {
+    "id": 8,
+    "lastName": "Strickland",
+    "firstName": "Sharon",
+    "department": "Public Relations",
+    "jobTitle": "Communications Specialist",
+    "location": "Vancouver",
+    "phone": "912-555-0234",
+    "email": "sstrickland@exogeni.com"
+  },
+  {
+    "id": 9,
+    "lastName": "Chong",
+    "firstName": "William",
+    "department": "Sales",
+    "jobTitle": "Associate",
+    "location": "Illium",
+    "phone": "307-555-0125",
+    "email": "wchong@exogeni.com"
+  },
+  {
+    "id": 10,
+    "lastName": "Packard",
+    "firstName": "Lawrence",
+    "department": "Security",
+    "jobTitle": "Security Officer",
+    "location": "Vancouver",
+    "phone": "912-555-0295",
+    "email": "lpackard@exogeni.com"
+  }
+]
