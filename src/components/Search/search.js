@@ -17,7 +17,8 @@ class Search extends React.Component {
       return comparison;
     }),
     search: "",
-    sortMethod: "lastName Desc"
+    sortMethod: "lastName Desc",
+    sortStatus: true
   };
 
   handleInputChange = event => {
@@ -57,7 +58,8 @@ class Search extends React.Component {
         return comparison;
       }),
       search: "",
-      sortMethod: "lastName Desc"
+      sortMethod: "lastName Desc",
+      sortStatus: true
     });
   };
 
@@ -78,7 +80,8 @@ class Search extends React.Component {
                 : (comparison = 0);
               return comparison;
             }),
-            sortMethod: "lastName Asc"
+            sortMethod: "lastName Asc",
+            sortStatus: true
           });
           break;
         default:
@@ -94,7 +97,8 @@ class Search extends React.Component {
                 : (comparison = 0);
               return comparison;
             }),
-            sortMethod: "lastName Desc"
+            sortMethod: "lastName Desc",
+            sortStatus: true
           });
       }
     } else if (sortTarget === "location") {
@@ -112,7 +116,8 @@ class Search extends React.Component {
                 : (comparison = 0);
               return comparison;
             }),
-            sortMethod: "location Asc"
+            sortMethod: "location Asc",
+            sortStatus: false
           });
           break;
         default:
@@ -128,7 +133,8 @@ class Search extends React.Component {
                 : (comparison = 0);
               return comparison;
             }),
-            sortMethod: "location Desc"
+            sortMethod: "location Desc",
+            sortStatus: false
           });
       }
     }
@@ -152,6 +158,7 @@ class Search extends React.Component {
                 <SearchResults
                   employees={this.state.result}
                   handleSort={this.handleSort}
+                  sortStatus={this.state.sortStatus}
                 />
               </div>
             </div>

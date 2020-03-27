@@ -10,7 +10,11 @@ function SearchResults(props) {
             <tr>
               <th
                 scope="col"
-                className="px-3 sortHeading"
+                className={
+                  props.sortStatus === true
+                    ? "px-3 sortHeading bg-dark text-white"
+                    : "px-3 sortHeading"
+                }
                 data-sort="lastName"
                 onClick={props.handleSort}
               >
@@ -27,7 +31,11 @@ function SearchResults(props) {
               </th>
               <th
                 scope="col"
-                className="px-3 sortHeading"
+                className={
+                  props.sortStatus === false
+                    ? "px-3 sortHeading bg-dark text-white"
+                    : "px-3 sortHeading"
+                }
                 data-sort="location"
                 onClick={props.handleSort}
               >
