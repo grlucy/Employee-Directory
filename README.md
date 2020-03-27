@@ -1,6 +1,6 @@
 # Employee-Directory
 
-Deployed at XX
+Deployed at https://exogeni-directory.herokuapp.com/
 
 ## Description
 
