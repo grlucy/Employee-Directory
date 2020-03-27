@@ -1,12 +1,16 @@
 import React from "react";
+import Header from "./components/Header/header";
+
+import Footer from "./components/Footer/footer";
+import "./app.css";
 
 function App() {
   return (
     <>
       <div className="mainContentDiv">
-        <h1>Header, SearchForm, and SearchResults go here</h1>
+        <Header />
       </div>
-      <h4>Footer goes here</h4>
+      <Footer />
     </>
   );
 }
