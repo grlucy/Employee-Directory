@@ -17,7 +17,7 @@ function SearchForm(props) {
             type="submit"
             className="btn btn-primary ml-sm-3 mt-3 mt-sm-0 text-white"
           >
-            <i class="fas fa-search"></i>
+            <i className="fas fa-search"></i>
           </button>
         </form>
       </div>
