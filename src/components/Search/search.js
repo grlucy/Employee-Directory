@@ -5,7 +5,17 @@ import SearchForm from "../SearchForm/searchForm";
 
 class Search extends React.Component {
   state = {
-    result: Employees,
+    result: Employees.sort((a, b) => {
+      const lastNameA = a.lastName.toUpperCase();
+      const lastNameB = b.lastName.toUpperCase();
+      let comparison = 0;
+      lastNameA > lastNameB
+        ? (comparison = 1)
+        : lastNameB > lastNameA
+        ? (comparison = -1)
+        : (comparison = 0);
+      return comparison;
+    }),
     search: ""
   };
 
@@ -34,6 +44,17 @@ class Search extends React.Component {
   handleClear = event => {
     console.log(`clear btn was clicked`);
     this.setState({
+      result: Employees.sort((a, b) => {
+        const lastNameA = a.lastName.toUpperCase();
+        const lastNameB = b.lastName.toUpperCase();
+        let comparison = 0;
+        lastNameA > lastNameB
+          ? (comparison = 1)
+          : lastNameB > lastNameA
+          ? (comparison = -1)
+          : (comparison = 0);
+        return comparison;
+      }),
       search: ""
     });
   };
